@@ -1,20 +1,30 @@
 from pico2d import *
-
-import game_framework
 import play_state
+import logo_state
+import game_framework
 
 image = None
 
 def enter():
-    # fill here
+    global image
+    image = load_image('title.png')
     pass
 
 def exit():
-    # fill here
+    global image
+    del image
     pass
 
 def handle_events():
-    # fill here
+    events = get_events()
+
+    for event in events:
+        if event.type == SDL_KEYDOWN:
+            if event.key == SDLK_SPACE:
+                game_framework.change_state(play_state)
+            if event.key == SDLK_ESCAPE:
+                game_framework.quit()
+        
     pass
 
 def draw():
