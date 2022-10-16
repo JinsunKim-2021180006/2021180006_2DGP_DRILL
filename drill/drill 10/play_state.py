@@ -76,7 +76,7 @@ def enter():
     if n <=0:
         n = 1
 
-    team = [Boy() for i in range(n)]
+    team = [Boy() for i in range(1,n)]
     grass = Grass()
 
 #종료 - 객체를 소멸
