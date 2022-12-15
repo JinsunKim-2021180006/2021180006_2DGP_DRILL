@@ -11,9 +11,6 @@ class Ball:
         
         self.canvas_width = get_canvas_width()
         self.canvas_height = get_canvas_height()
-
-        self.w = 23
-        self.h = 23
         self.x,self.y=x,y
 
     def draw(self):

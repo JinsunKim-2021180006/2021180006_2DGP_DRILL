@@ -15,7 +15,7 @@ import server
 
 
 def enter():
-    server.ball = [Ball(randint(10,800),randint(10,600))for n in range(100)]
+    server.ball = [Ball(randint(10,1600),randint(10,600))for n in range(100)]
     game_world.add_objects(server.ball,1)
     
     server.boy = Boy()
